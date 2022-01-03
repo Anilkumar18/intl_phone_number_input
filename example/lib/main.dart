@@ -47,6 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             InternationalPhoneNumberInput(
+              backgroundColor: Colors.grey,
               onInputChanged: (PhoneNumber number) {
                 print(number.phoneNumber);
               },
@@ -61,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
               selectorTextStyle: TextStyle(color: Colors.black),
               initialValue: number,
               textFieldController: controller,
-              formatInput: false,
+              formatInput: true,
               keyboardType:
                   TextInputType.numberWithOptions(signed: true, decimal: true),
               inputBorder: OutlineInputBorder(),
